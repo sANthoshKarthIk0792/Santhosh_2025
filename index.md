@@ -1,14 +1,11 @@
 ---
 layout: base
-title: Student Home 
+title: Student Home
 description: Home Page
 image: /images/mario_animation.png
 hide: true
 ---
-Santhoshhhhhhhhh
-My journey starts here.
-
-
+SANTHOSSSSSHHH
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -192,6 +189,7 @@ My journey starts here.
   });
 
 </script>
+
 
 ### Markdown samples  [markdown cheatsheet](https://www.markdownguide.org/getting-started/)
 
