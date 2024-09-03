@@ -5,7 +5,7 @@ description: Home Page
 image: /images/mario_animation.png
 hide: true
 ---
-SANTHOSSSSSHHH
+
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -190,10 +190,9 @@ SANTHOSSSSSHHH
 
 </script>
 
-
 ### Markdown samples  [markdown cheatsheet](https://www.markdownguide.org/getting-started/)
 
-> Using markdown form index.md.  We are learning markdown.
+> Using markdown form index.md.  We are learning markdown. - Santhosh
 
 - This text below is something called Markdown. This is a heading, inside of code scaffolding.
 
