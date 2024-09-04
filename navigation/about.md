@@ -1,3 +1,8 @@
+---
+layout: page
+title: about
+permalink: /about/
+---
 <style>
     /* Style looks pretty compact, trace grid-container and grid-item in the code */
     .grid-container {
