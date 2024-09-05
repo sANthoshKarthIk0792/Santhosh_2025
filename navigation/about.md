@@ -22,8 +22,8 @@ permalink: /about/
         font-family: monospace;
     }
     .grid-description img {
-    width: 50%;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     }
     .grid-item {
         text-align: center;
