@@ -44,6 +44,10 @@ permalink: /about/
 
 </div> 
 
+<div class ="grid-description" id = "grid_description2">
+
+</div>
+
 <div class="grid-container" id="grid_container">
 
 </div>
@@ -53,6 +57,7 @@ permalink: /about/
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
+    var container_3 = document.getElementById("grid_description2");
     var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
@@ -64,8 +69,8 @@ permalink: /about/
     
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-
     var favorite_color = "My favorite color is orange, specifically a light orange because I don't like dark oranges that much";
+    var games_i_like = ["image
     var interests = [ 
         {"image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/906.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my favorite current gen pokemon has to be Sprigattito :D"},
         {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually British)"}
