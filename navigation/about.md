@@ -10,6 +10,15 @@ permalink: /about/
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
         gap: 10px;
     }
+    .grid-description {
+        display: grid;
+        background-color: orange;
+        text-align: center;
+        border-style: dotted;
+    }
+    .grid-description p {
+        font-family: monospace;
+    }
     .grid-item {
         text-align: center;
     }
@@ -21,31 +30,51 @@ permalink: /about/
     .grid-item p {
         margin: 5px 0; /* Add some margin for spacing */
     }
+    
 </style>
 
 <!-- This grid_container class is for the CSS styling, the id is for JavaScript connection -->
 <div class="grid-container" id="grid_container">
-    <!-- content will be added here by JavaScript -->
 </div>
 
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_container"); // This container connects to the HTML div
-
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
-    var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
+    var where_i_am_from = [
+        {"flag": "4/41/Flag_of_India.svg", "greeting": "Hey", "description": "My parents were born in India, but I was born in the United States"},
+        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hey", "description": "I was born in the United States in the state of California}
     ]; 
     
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-
+    description.className = "grid-description";
+    var favorite_color = "My favorite color is orange, specifically a light orange because I don't like dark oranges that much";
+    var interests = [ 
+        {"image": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/0906Sprigatito.png/500px-0906Sprigatito.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my         favorite current gen pokemon has to be Sprigattito :D"},
+        {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually british)}
+        ];
+    for (const location of interests) {
+        // Create the div for "grid-description" to create the description of me 
+        var my_background = document.createElement("div");
+        my_background.className = "grid-description";
+        
+        // Create the images to better describe myself
+        var img = document.createElement("img");
+        img.src = http_source + location.flag;
+        img.alt = location.alt;
+        
+        // Adds the "p" HTML tag for the description of me
+        var description = document.createElement("p");
+        description.textContent = location.description;
+        my_background.appendChild(img);
+        my_background.appendChild(description);
+        container.appendChild(my_background);
+        
+    }
     // 3b. Build grid items inside of our container for each row of data
-    for (const location of living_in_the_world) {
+    for (const location of where_i_am_from) {
         // Create a "div" with "class grid-item" for each row
         var gridItem = document.createElement("div");
         gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
@@ -70,4 +99,5 @@ permalink: /about/
         // Append the grid item DIV to the container DIV
         container.appendChild(gridItem);
     }
+    
 </script>
