@@ -19,7 +19,6 @@ permalink: /about/
         border-style: dotted;
     }
     .grid-description p {
-        60vh
         font-family: monospace;
     }
     .grid-item {
@@ -50,23 +49,22 @@ permalink: /about/
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
-    var container_2 = document2.getElementById("grid_container"); // This container connects to the HTML div
+    var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var where_i_am_from = [
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Hey", "description": "My parents were born in India, but I was born in the United States"},
-        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hey", "description": "I was born in the United States in the state of California}
+        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hey", "description": "I was born in the United States in the state of California"}
     ]; 
     
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
 
-      description.className = "grid-description";
     var favorite_color = "My favorite color is orange, specifically a light orange because I don't like dark oranges that much";
     var interests = [ 
         {"image": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/0906Sprigatito.png/500px-0906Sprigatito.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my favorite current gen pokemon has to be Sprigattito :D"},
-        {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually british)}
+        {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually British)"}
         ];
     for (const location of interests) {
         // Create the div for "grid-description" to create the description of me 
@@ -75,7 +73,7 @@ permalink: /about/
         
         // Create the images to better describe myself
         var description_img = document.createElement("img");
-        description_img.src = http_source + location.flag;
+        description_img.src = location.image;
         description_img.alt = location.alt;
         
         // Adds the "p" HTML tag for the description of me
@@ -90,19 +88,19 @@ permalink: /about/
     // 3b. Build grid items inside of our container for each row of data
     for (const location of where_i_am_from) {
         // Create a "div" with "class grid-item" for each row
-        var gridItem = document2.createElement("div");
+        var gridItem = document.createElement("div");
         gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
         // Add "img" HTML tag for the flag
-        var img = document2.createElement("img");
+        var img = document.createElement("img");
         img.src = http_source + location.flag; // concatenate the source and flag
         img.alt = location.flag + " Flag"; // add alt text for accessibility
 
         // Add "p" HTML tag for the description
-        var description = document2.createElement("p");
+        var description = document.createElement("p");
         description.textContent = location.description; // extract the description
 
         // Add "p" HTML tag for the greeting
-        var greeting = document2.createElement("p");
+        var greeting = document.createElement("p");
         greeting.textContent = location.greeting;  // extract the greeting
 
         // Append img and p HTML tags to the grid item DIV
