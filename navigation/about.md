@@ -38,9 +38,11 @@ permalink: /about/
 
 </div>
 
-<div class="grid-container" id="grid_container">
+/*<div class="grid-container" id="grid_container">
 
-</div>
+</div> 
+*/
+
 
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
@@ -54,7 +56,8 @@ permalink: /about/
     
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-    description.className = "grid-description";
+
+    /*   description.className = "grid-description";
     var favorite_color = "My favorite color is orange, specifically a light orange because I don't like dark oranges that much";
     var interests = [ 
         {"image": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/0906Sprigatito.png/500px-0906Sprigatito.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my favorite current gen pokemon has to be Sprigattito :D"},
@@ -78,7 +81,7 @@ permalink: /about/
         my_background.appendChild(descriptions);
         container.appendChild(my_background);
         
-    }
+    }*/
     // 3b. Build grid items inside of our container for each row of data
     for (const location of where_i_am_from) {
         // Create a "div" with "class grid-item" for each row
