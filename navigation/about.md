@@ -6,13 +6,11 @@ permalink: /about/
 <style>
     /* Style looks pretty compact, trace grid-container and grid-item in the code */
     .grid-container {
-        height: 40vh;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
         gap: 10px;
     }
     .grid-description {
-        height: 60vh;
         display: grid;
         background-color: orange;
         text-align: center;
