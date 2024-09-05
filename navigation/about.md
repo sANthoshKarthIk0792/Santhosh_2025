@@ -57,7 +57,9 @@ permalink: /about/
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var where_i_am_from = [
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Hello!", "description": "My parents were born in India, but I was born in the United States"},
-        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"}
+        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"},
+        {"flag": "1/19/Flag_of_San_Diego%2C_California.svg", "greeting": "I was born in Scripps Ranch Hospital", "description": "San Diego is the only city that I have ever lived in"},
+        {"flag": "d/d9/Flag_of_Canada_%28Pantone%29.svg", "greeting": "Hi", "description": "I have seen Canada once from Niagra Falls"}
     ]; 
     
     // 3a. Consider how to update style count for size of container
