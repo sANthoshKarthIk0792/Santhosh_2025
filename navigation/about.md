@@ -19,6 +19,7 @@ permalink: /about/
         border-style: dotted;
     }
     .grid-description p {
+        60vh
         font-family: monospace;
     }
     .grid-item {
@@ -49,7 +50,7 @@ permalink: /about/
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
-    var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
+    var container_2 = document2.getElementById("grid_container"); // This container connects to the HTML div
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
@@ -89,19 +90,19 @@ permalink: /about/
     // 3b. Build grid items inside of our container for each row of data
     for (const location of where_i_am_from) {
         // Create a "div" with "class grid-item" for each row
-        var gridItem = document.createElement("div");
+        var gridItem = document2.createElement("div");
         gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
         // Add "img" HTML tag for the flag
-        var img = document.createElement("img");
+        var img = document2.createElement("img");
         img.src = http_source + location.flag; // concatenate the source and flag
         img.alt = location.flag + " Flag"; // add alt text for accessibility
 
         // Add "p" HTML tag for the description
-        var description = document.createElement("p");
+        var description = document2.createElement("p");
         description.textContent = location.description; // extract the description
 
         // Add "p" HTML tag for the greeting
-        var greeting = document.createElement("p");
+        var greeting = document2.createElement("p");
         greeting.textContent = location.greeting;  // extract the greeting
 
         // Append img and p HTML tags to the grid item DIV
@@ -110,7 +111,7 @@ permalink: /about/
         gridItem.appendChild(greeting);
 
         // Append the grid item DIV to the container DIV
-        container.appendChild(gridItem);
+        container_2.appendChild(gridItem);
     }
     
 </script>
