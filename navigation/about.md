@@ -37,9 +37,11 @@ permalink: /about/
 <div class="grid-container" id="grid_container">
 
 </div>
+
 <div class="grid-container" id="grid_container">
 
 </div>
+
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_container"); // This container connects to the HTML div
@@ -55,7 +57,7 @@ permalink: /about/
     description.className = "grid-description";
     var favorite_color = "My favorite color is orange, specifically a light orange because I don't like dark oranges that much";
     var interests = [ 
-        {"image": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/0906Sprigatito.png/500px-0906Sprigatito.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my         favorite current gen pokemon has to be Sprigattito :D"},
+        {"image": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/0906Sprigatito.png/500px-0906Sprigatito.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my favorite current gen pokemon has to be Sprigattito :D"},
         {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually british)}
         ];
     for (const location of interests) {
@@ -64,15 +66,16 @@ permalink: /about/
         my_background.className = "grid-description";
         
         // Create the images to better describe myself
-        var img = document.createElement("img");
-        img.src = http_source + location.flag;
-        img.alt = location.alt;
+        var description_img = document.createElement("img");
+        description_img.src = http_source + location.flag;
+        description_img.alt = location.alt;
         
         // Adds the "p" HTML tag for the description of me
-        var description = document.createElement("p");
-        description.textContent = location.description;
-        my_background.appendChild(img);
-        my_background.appendChild(description);
+        var descriptions = document.createElement("p");
+        descriptions.textContent = location.description;
+       
+        my_background.appendChild(description_img);
+        my_background.appendChild(descriptions);
         container.appendChild(my_background);
         
     }
