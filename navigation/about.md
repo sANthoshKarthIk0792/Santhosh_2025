@@ -21,6 +21,10 @@ permalink: /about/
     .grid-description p {
         font-family: monospace;
     }
+    .grid-description img {
+    width: 50%;
+    height: 50px;
+    }
     .grid-item {
         text-align: center;
     }
