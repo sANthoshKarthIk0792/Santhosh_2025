@@ -44,20 +44,13 @@ permalink: /about/
 
 </div> 
 
-<div class ="grid-description" id = "grid_description2">
-
-</div>
-
 <div class="grid-container" id="grid_container">
 
 </div>
 
-
-
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
-    var container_3 = document.getElementById("grid_description2");
     var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
