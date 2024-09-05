@@ -58,8 +58,8 @@ permalink: /about/
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var where_i_am_from = [
-        {"flag": "4/41/Flag_of_India.svg", "greeting": "Hey", "description": "My parents were born in India, but I was born in the United States"},
-        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hey", "description": "I was born in the United States in the state of California"}
+        {"flag": "4/41/Flag_of_India.svg", "greeting": "Hello!", "description": "My parents were born in India, but I was born in the United States"},
+        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"}
     ]; 
     
     // 3a. Consider how to update style count for size of container
@@ -108,9 +108,9 @@ permalink: /about/
         greeting.textContent = location.greeting;  // extract the greeting
 
         // Append img and p HTML tags to the grid item DIV
+        gridItem.appendChild(greeting);
         gridItem.appendChild(img);
         gridItem.appendChild(description);
-        gridItem.appendChild(greeting);
 
         // Append the grid item DIV to the container DIV
         container_2.appendChild(gridItem);
