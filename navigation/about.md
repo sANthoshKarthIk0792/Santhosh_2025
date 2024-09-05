@@ -35,8 +35,11 @@ permalink: /about/
 
 <!-- This grid_container class is for the CSS styling, the id is for JavaScript connection -->
 <div class="grid-container" id="grid_container">
-</div>
 
+</div>
+<div class="grid-container" id="grid_container">
+
+</div>
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_container"); // This container connects to the HTML div
