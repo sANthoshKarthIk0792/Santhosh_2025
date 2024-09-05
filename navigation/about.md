@@ -9,14 +9,14 @@ permalink: /about/
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
         gap: 10px;
-        margin: 10px;
+        margin: 10px 10px;
     }
     .grid-description {
         display: grid;
         background-color: orange;
         text-align: center;
         border-style: dotted;
-        margin: 10px;
+        margin: 10px 10px;
     }
     .grid-description p {
         font-family: monospace;
