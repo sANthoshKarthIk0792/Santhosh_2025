@@ -11,8 +11,11 @@ permalink: /about/
         gap: 10px;
         margin: 10px 10px;
     }
+    .grid-bulletpoints {
+        font-family: monospace;
+    }
     .grid-bulletpoints ul{
-        font-family:monospace;
+        font-family: monospace;
     }
     .grid-description {
         display: grid;
@@ -58,7 +61,7 @@ permalink: /about/
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
     var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
-    var container_2 = document.getElementById("grid_bulletpoints);
+    var container_3 = document.getElementById("grid_bulletpoints);
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
