@@ -17,6 +17,21 @@ permalink: /about/
     .grid-bulletpoints ul{
         font-family: monospace;
     }
+    .grid-games {
+        display: grid;
+        background-color: red;
+        text-align: center;
+        border-style: dotted;
+        margin: 10px 10px;
+    }
+    .grid-games p {
+        font-family: monospace;
+    }
+    .grid-games img {
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
     .grid-description {
         display: grid;
         background-color: orange;
@@ -28,8 +43,9 @@ permalink: /about/
         font-family: monospace;
     }
     .grid-description img {
-    width: 100px;
-    height: 100px;
+        width: 100px;
+        height: 100px;
+        float: left;
     }
     .grid-item {
         text-align: center;
@@ -53,7 +69,12 @@ permalink: /about/
 <div class="grid-container" id="grid_container">
 
 </div>
+
 <div class ="grid-bulletpoints" id ="grid_bulletpoints">
+
+</div>
+
+<div class = "grid-games" id ="grid-bulletpoints">
 
 </div>
 
@@ -62,13 +83,14 @@ permalink: /about/
     var container = document.getElementById("grid_description");
     var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
     var container_3 = document.getElementById("grid_bulletpoints");
+    var container_4 = document.getElementByID("grid_bulletpoints");
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var where_i_am_from = [
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Hello!", "description": "My parents were born in India, but I was born in the United States"},
         {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"},
-        {"flag": "1/19/Flag_of_San_Diego%2C_California.svg", "greeting": "I was born in Scripps Ranch Hospital", "description": "San Diego is the only city that I have ever lived in"},
+        {"flag": "1/19/Flag_of_San_Diego%2C_California.svg", "greeting": "Born in Scripps Ranch Hospital", "description": "San Diego is the only city that I have ever lived in"},
         {"flag": "d/d9/Flag_of_Canada_%28Pantone%29.svg", "greeting": "Hi", "description": "I have seen Canada once from Niagra Falls"}
         
     ]; 
@@ -84,7 +106,7 @@ permalink: /about/
         {"bullet": "When I was in second grade, to a different house, so instead I went to Del Sur Elementary"},
         {"bullet": "The middle school I went to was Oak Valley Middle School"},
         {"bullet": "Now I am currently a freshman at Del Norte High School!!!"}
-                       ];
+        ];
     for (const location of interests) {
         // Create the div for "grid-description" to create the description of me 
         var my_background = document.createElement("div");
@@ -142,6 +164,7 @@ permalink: /about/
     
     lifeJourney.appendChild(bullets);
     container_3.appendChild(lifeJourney);
-}
+    }
+    
     
 </script>
