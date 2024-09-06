@@ -80,7 +80,7 @@ permalink: /about/
     var life_journey = ["bullet": "I first went to school at Kid's Care Club, which was a daycare for before kindergarten"},                                 {"bullet": "My first Elementary school was Monterey Ridge Elementary School"},
                        {"bullet": "When I was in second grade, to a different house, so instead I went to Del Sur Elementary"},
                        {"bullet": "The middle school I went to was Oak Valley Middle School"},
-                       {"bullet": "Now I am currently a Freshmen at Del Norte High School!!!"}
+                       {"bullet": "Now I am currently a freshman at Del Norte High School!!!"}
                        ];
     for (const location of interests) {
         // Create the div for "grid-description" to create the description of me 
@@ -133,7 +133,7 @@ permalink: /about/
         life_journey.className = "grid-bulletpoints";
         life_journey.textConent = location.bullet;
 
-        container_3.appendChild((life_journey);
+        container_3.appendChild(life_journey);
     }
     
 </script>
