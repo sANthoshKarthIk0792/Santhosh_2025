@@ -61,29 +61,29 @@ permalink: /about/
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
     var container_2 = document.getElementById("grid_container"); // This container connects to the HTML div
-    var container_3 = document.getElementById("grid_bulletpoints);
+    var container_3 = document.getElementById("grid_bulletpoints");
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var where_i_am_from = [
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Hello!", "description": "My parents were born in India, but I was born in the United States"},
-        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"}/*,
+        {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"},
         {"flag": "1/19/Flag_of_San_Diego%2C_California.svg", "greeting": "I was born in Scripps Ranch Hospital", "description": "San Diego is the only city that I have ever lived in"},
         {"flag": "d/d9/Flag_of_Canada_%28Pantone%29.svg", "greeting": "Hi", "description": "I have seen Canada once from Niagra Falls"}
-        */
+        
     ]; 
     
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-    var games_i_like = ["image
     var interests = [ 
         {"image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/906.png", "alt": "Picture of Sprigatito", "description": "I love pokemon a lot, has to be one of my favorite series. I think that              grass pokemon are the cutest, and my favorite current gen pokemon has to be Sprigattito :D"},
         {"image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg", "alt": "Cover of Never Let Me Go", "description": "I also enjoy reading books a lot, and while I have primarily read           fantasy books I am trying to read more classics like The Scarlet Letter. I am currently reading Never Let Me Go by Kazuo Ishiguro (sounds Japanese but he is actually British)"}
         ];
-    var life_journey = ["bullet": "I first went to school at Kid's Care Club, which was a daycare for before kindergarten"},                                 {"bullet": "My first Elementary school was Monterey Ridge Elementary School"},
-                       {"bullet": "When I was in second grade, to a different house, so instead I went to Del Sur Elementary"},
-                       {"bullet": "The middle school I went to was Oak Valley Middle School"},
-                       {"bullet": "Now I am currently a freshman at Del Norte High School!!!"}
+    var life_journey = [
+        {"bullet": "I first went to school at Kid's Care Club, which was a daycare for before kindergarten"},                                 {"bullet": "My first Elementary school was Monterey Ridge Elementary School"},
+        {"bullet": "When I was in second grade, to a different house, so instead I went to Del Sur Elementary"},
+        {"bullet": "The middle school I went to was Oak Valley Middle School"},
+        {"bullet": "Now I am currently a freshman at Del Norte High School!!!"}
                        ];
     for (const location of interests) {
         // Create the div for "grid-description" to create the description of me 
@@ -131,13 +131,17 @@ permalink: /about/
         // Append the grid item DIV to the container DIV
         container_2.appendChild(gridItem);
     } 
-    for (const location of life_journey){
-        var life_journey = document.createElement("div");
-        life_journey.className = "grid-bulletpoints";
-        var bullets = document.createlement ("ul");
-        bullets.textContent = location.bullet;
-        life_journey.appendChild(bullets);
-        container_3.appendChild(life_journey);
-    }
+    for (const location of life_journey) {
+    var lifeJourney = document.createElement("div");
+    lifeJourney.className = "grid-bulletpoints";
+    
+    var bullets = document.createElement("ul");
+    var bulletItem = document.createElement("li");
+    bulletItem.textContent = location.bullet;
+    bullets.appendChild(bulletItem);
+    
+    lifeJourney.appendChild(bullets);
+    container_3.appendChild(lifeJourney);
+}
     
 </script>
