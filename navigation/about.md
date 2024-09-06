@@ -132,10 +132,11 @@ permalink: /about/
         container_2.appendChild(gridItem);
     } 
     for (const location of life_journey){
-        var life_journey = document.createElement("ul");
+        var life_journey = document.createElement("div");
         life_journey.className = "grid-bulletpoints";
-        life_journey.textConent = location.bullet;
-
+        var bullets = document.createlement ("ul");
+        bullets.textContent = location.bullet;
+        life_journey.appendChild(bullets);
         container_3.appendChild(life_journey);
     }
     
