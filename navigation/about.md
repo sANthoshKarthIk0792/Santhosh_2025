@@ -87,6 +87,12 @@ permalink: /about/
     
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
+    var favorite_game = [
+        {"cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ8oaq9uAy8FpbAE3IL85Dbo0xhBfauk-ZYw&s", "game": "Minecraft", "description": "Minecraft is a Sandbox game that you can play on and offline"},
+        {"cover": "https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg", "game": "TLOK: Tears of the Kingdom", "description": "Tears of the Kingdom is the latest Zelda game, and is an open world game with many side quests and storys"},
+        {"cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4TR8Hbgv3-TWZtWGHE-mFAW5pY0wpaRfpA&s", "game": "Pokemon Violet", "description": "Pokemon Violet is a semi open world pokemon game that I like because it is the frst pokemon game I've ever played"}
+
+    ];
     var where_i_am_from = [
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Hello!", "description": "My parents were born in India, but I was born in the United States"},
         {"flag": "a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg", "greeting": "Hello!", "description": "I was born in the United States in the state of California"},
@@ -166,5 +172,23 @@ permalink: /about/
     container_3.appendChild(lifeJourney);
     }
     
+    for (const location of favorite_games){
+    var games = documment.createElement("div");
+    games.className = "grid-games"
+
+    var game_name = document.createElement("p");
+    game_name.textConent = location.game;
+    
+    var game_image = document.createElement("img");
+    game_image.src = location.cover;
+
+    var game_description = document.createElement("p");
+    game_description.textConent = location.description;
+    }
+
+    games.appendChild(game_name);
+    games.appendChild(game_image);
+    games.appendChild(game_description);
+    container_4.appendChild(games);
     
 </script>
