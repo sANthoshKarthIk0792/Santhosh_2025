@@ -29,7 +29,7 @@ permalink: /about/
     }
     .grid-games img {
         width: 100px;
-        height: 100px;
+        height: auto;
         float: left;
     }
     .grid-description {
@@ -44,7 +44,7 @@ permalink: /about/
     }
     .grid-description img {
         width: 100px;
-        height: 100px;
+        height: auto;
         float: left;
     }
     .grid-item {
