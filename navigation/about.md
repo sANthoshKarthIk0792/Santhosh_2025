@@ -77,6 +77,7 @@ permalink: /about/
 <div class = "grid-games" id ="grid_games">
 
 </div>
+
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
@@ -190,6 +191,7 @@ permalink: /about/
     }
     <button type="button"> Me!</button>
 </script>
-<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
+
+<!--<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
   <button> Click this to learn more about what games I like </button>
-</a>
+</a>-->
