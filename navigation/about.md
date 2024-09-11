@@ -20,7 +20,6 @@ permalink: /about/
     .grid-games {
         display: grid;
         text-align: center;
-        border-style: dotted;
         margin: 10px 10px;
     }
     .grid-games p {
@@ -34,7 +33,6 @@ permalink: /about/
     .grid-description {
         display: grid;
         text-align: center;
-        border-style: dotted;
         margin: 10px 10px;
     }
     .grid-description p {
