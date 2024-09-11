@@ -189,7 +189,6 @@ permalink: /about/
     games.appendChild(game_description);
     container_4.appendChild(games);
     }
-    <button type="button"> Me!</button>
 </script>
 
 <a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
