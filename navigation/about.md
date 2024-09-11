@@ -77,10 +77,6 @@ permalink: /about/
 <div class = "grid-games" id ="grid_games">
 
 </div>
-<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
-  <button> Click this to learn more about what games I like </button>
-</a>
-
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
     var container = document.getElementById("grid_description");
