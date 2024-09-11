@@ -19,7 +19,6 @@ permalink: /about/
     }
     .grid-games {
         display: grid;
-        background-color: red;
         text-align: center;
         border-style: dotted;
         margin: 10px 10px;
@@ -34,7 +33,6 @@ permalink: /about/
     }
     .grid-description {
         display: grid;
-        background-color: orange;
         text-align: center;
         border-style: dotted;
         margin: 10px 10px;
