@@ -7,7 +7,6 @@ hide: true
 ---
 
 New Kasm Test
-HIIIII!!!
 
 <!-- Liquid:  statements -->
 
