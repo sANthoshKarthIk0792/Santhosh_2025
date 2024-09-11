@@ -11,7 +11,7 @@ permalink: /games/
 <img src = "https://github.com/user-attachments/assets/f5e5f822-9e25-472e-9c63-6b85abf65356" alt = "TOTK cover" height = 200px>
 <p>I like Tears of the Kingdom because of how open the game is, and how unlinear it is. Almost nothing in the game is locked behind progression, except for events in the story. I think that the puzzles, combat and abilities in the gameare good.</p>
 <h3>Minecraft</h3>
-<img src = "!https://github.com/user-attachments/assets/f2f527f6-92b0-47ff-b05d-533c4ae15c67" alt = "Minecraft cover" height = 200px>
+<img src = "https://github.com/user-attachments/assets/f2f527f6-92b0-47ff-b05d-533c4ae15c67" alt = "Minecraft cover" height = 200px>
 <p>I like Minecraft for a lot of the reasons that I like Tears of the Kingdom, you can do pretty much whatever you want, but you can mod Minecraft to add more to it.</p>
 <h3>Roblox</h3>
 <p>I don't usually play Roblox that much, but I like how many different games they are. While individual games might not be that high quality, the many games make Roblox muchhhh better.</p> 
