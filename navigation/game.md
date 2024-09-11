@@ -3,7 +3,9 @@ layout: base
 title: Games
 permalink: /games/
 ---
+<style>
 $primary-font: 'Courier';
+</style>
 <h1> These are my favorite games and why I like them</h1>
 <h3> Pokemon: Violet</h3>
 <img src ="https://github.com/user-attachments/assets/6ce31853-d833-4f9f-8bdd-3db09af1c384" alt = "Violet Cover" height = 200px>
