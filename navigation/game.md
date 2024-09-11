@@ -14,6 +14,7 @@ permalink: /games/
 <img src = "https://github.com/user-attachments/assets/f2f527f6-92b0-47ff-b05d-533c4ae15c67" alt = "Minecraft cover" height = 200px>
 <p>I like Minecraft for a lot of the reasons that I like Tears of the Kingdom, you can do pretty much whatever you want, but you can mod Minecraft to add more to it.</p>
 <h3>Roblox</h3>
+<img src = "https://github.com/user-attachments/assets/19872854-90dd-4b00-a2fa-8f9d5db9f9e0" alt = "Roblox cover" height = 200px>
 <p>I don't usually play Roblox that much, but I like how many different games they are. While individual games might not be that high quality, the many games make Roblox muchhhh better.</p> 
 <h3>Persona 5: Royal</h3>
 <img src = "https://github.com/user-attachments/assets/85aeb1ae-afdf-421c-b845-a30581363220" alt = "Persona 5: Royal Cover" height = 200px>
