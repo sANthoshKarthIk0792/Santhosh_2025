@@ -192,6 +192,6 @@ permalink: /about/
     <button type="button"> Me!</button>
 </script>
 
-<!--<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
+<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
   <button> Click this to learn more about what games I like </button>
-</a>-->
+</a>
