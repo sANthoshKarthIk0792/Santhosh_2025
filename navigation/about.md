@@ -19,6 +19,7 @@ permalink: /about/
     }
     .grid-games {
         display: grid;
+        border-style: solid;
         text-align: center;
         margin: 10px 10px;
     }
@@ -37,6 +38,7 @@ permalink: /about/
     }
     .grid-description p {
         font-family: monospace;
+        border-style: solid;
     }
     .grid-description img {
         width: 100px;
