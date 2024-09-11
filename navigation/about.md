@@ -75,7 +75,9 @@ permalink: /about/
 </div>
 
 <div class = "grid-games" id ="grid_games">
-
+<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
+  <button> Click this to learn more about what games I like</button>
+</a>
 </div>
 
 <script>
@@ -183,13 +185,12 @@ permalink: /about/
     game_image.src = location.cover;
 
     var game_description = document.createElement("p");
-    game_description.textContent = location.description;
-
+    game_description.textContent = location.description;    
     games.appendChild(game_name);
     games.appendChild(game_image);
     games.appendChild(game_description);
     container_4.appendChild(games);
     }
 
-    
+    <button type="button"> Me!</button>
 </script>
