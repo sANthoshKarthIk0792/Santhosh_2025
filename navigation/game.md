@@ -4,7 +4,7 @@ title: Games
 permalink: /games/
 ---
 <style>
-$primary-font: 'Courier';
+$primary-font: Helvetica, sans-serif
 </style>
 <h1> These are my favorite games and why I like them</h1>
 <h3> Pokemon: Violet</h3>
