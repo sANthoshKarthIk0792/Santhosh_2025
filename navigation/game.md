@@ -4,8 +4,12 @@ title: Games
 permalink: /games/
 ---
 <style>
-$primary-font: Helvetica, sans-serif
+$primary-font: Helvetica, sans-serif;
+body {
+  font-family: $primary-font;
+}
 </style>
+<body>
 <h1> These are my favorite games and why I like them</h1>
 <h3> Pokemon: Violet</h3>
 <img src ="https://github.com/user-attachments/assets/6ce31853-d833-4f9f-8bdd-3db09af1c384" alt = "Violet Cover" height = 200px>
@@ -22,3 +26,4 @@ $primary-font: Helvetica, sans-serif
 <h3>Persona 5: Royal</h3>
 <img src = "https://github.com/user-attachments/assets/85aeb1ae-afdf-421c-b845-a30581363220" alt = "Persona 5: Royal Cover" height = 200px>
 <p>I like Persona  5 because I like the story, the characters, and the battle system . It is a very linear game, but has a great story and has many different things you can do throughout the days that isn't just battling, such as working or hanging out with characaters.</p>
+</body>
