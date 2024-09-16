@@ -111,7 +111,7 @@ permalink: /snake/
 </div>
 
 <script>
-   /* if (in_game = true){
+    if (SCREEN = SCREEN_SNAKE){
     window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
@@ -119,7 +119,7 @@ permalink: /snake/
     
 }, false);
     }
-    */
+    
     (function(){
         /* Attributes of Game */
         /////////////////////////////////////////////////////////////
