@@ -378,7 +378,8 @@ permalink: /snake/
             if(wall === 0){screen_snake.style.borderColor = "#606060";}
             if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
         }
-        if (SCREEN == SCREEN_SNAKE){
+    })();
+    if (SCREEN = SCREEN_SNAKE){
     window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
@@ -386,5 +387,4 @@ permalink: /snake/
     
 }, false);
     }
-    })();
 </script>
