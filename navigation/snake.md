@@ -111,12 +111,13 @@ permalink: /snake/
 </div>
 
 <script>
-
-window.addEventListener("keydown", function(e) {
+    if (in_game = true){
+    window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
     }
 }, false);
+    }
     (function(){
         /* Attributes of Game */
         /////////////////////////////////////////////////////////////
@@ -150,6 +151,7 @@ window.addEventListener("keydown", function(e) {
         let food = {x: 0, y: 0};
         let score;
         let wall;
+        let in_game = false;
         /* Display Control */
         /////////////////////////////////////////////////////////////
         // 0 for the game
@@ -183,9 +185,18 @@ window.addEventListener("keydown", function(e) {
         /////////////////////////////////////////////////////////////
         window.onload = function(){
             // HTML Events to Functions
-            button_new_game.onclick = function(){newGame();};
-            button_new_game1.onclick = function(){newGame();};
-            button_new_game2.onclick = function(){newGame();};
+            button_new_game.onclick = function(){
+                newGame();
+                in_game = true;
+            };
+            button_new_game1.onclick = function(){
+                newGame();
+                in_game = true;
+            };
+            button_new_game2.onclick = function(){
+                newGame();
+                in_game = true;
+            };
             button_setting_menu.onclick = function(){showScreen(SCREEN_SETTING);};
             button_setting_menu1.onclick = function(){showScreen(SCREEN_SETTING);};
             // speed
@@ -215,6 +226,7 @@ window.addEventListener("keydown", function(e) {
                 // spacebar detected
                 if(evt.code === "Space" && SCREEN !== SCREEN_SNAKE)
                     newGame();
+                    in_game = true;
             }, true);
         }
         /* Snake is on the Go (Driver Function)  */
@@ -237,6 +249,7 @@ window.addEventListener("keydown", function(e) {
                 // Wall on, Game over test
                 if (snake[0].x < 0 || snake[0].x === canvas.width / BLOCK || snake[0].y < 0 || snake[0].y === canvas.height / BLOCK){
                     showScreen(SCREEN_GAME_OVER);
+                    in_game =false;
                     return;
                 }
             }else{
