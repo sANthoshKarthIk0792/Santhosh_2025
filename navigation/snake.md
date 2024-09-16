@@ -379,7 +379,7 @@ permalink: /snake/
             if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
         }
     })();
-    if (SCREEN = SCREEN_SNAKE){
+    if (SCREEN == SCREEN_SNAKE){
     window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
