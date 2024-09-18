@@ -222,4 +222,14 @@ New Kasm Test
 
 Jelly Fish Fun
 
+<!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 ![image](https://github.com/user-attachments/assets/b14a08d2-d792-4b2f-aed5-e150490871af)
