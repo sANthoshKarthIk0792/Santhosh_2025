@@ -42,6 +42,9 @@ New Kasm Test
   #mario {
     background-position: calc({{animations[0].col}} * {{pixels}} * -1px) calc({{animations[0].row}} * {{pixels}}* -1px);
   }
+  .aboutdescriptions {
+
+  }
 </style>
 
 <!--- Embedded executable code--->
@@ -219,10 +222,16 @@ New Kasm Test
 - Focus on tehnical communications through project presentations and student led teaching
 - Grades are on projects, learnt concepts, and live reviews between student(s) and teacher
 ```
-
 Jelly Fish Fun
 
-<!-- from https://github.com/utterance/utterances -->
+![image](https://github.com/user-attachments/assets/b14a08d2-d792-4b2f-aed5-e150490871af)
+<div class = "aboutdescriptions">
+  <p> Click this button to learn about me! </p>
+  <a class = "aboutdescriptions">
+    <button> Click here! </button>
+  </a>
+</div> 
+
 <script src="https://utteranc.es/client.js"
         repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
         issue-term="title"
@@ -231,5 +240,3 @@ Jelly Fish Fun
         crossorigin="anonymous"
         async>
 </script>
-
-![image](https://github.com/user-attachments/assets/b14a08d2-d792-4b2f-aed5-e150490871af)
