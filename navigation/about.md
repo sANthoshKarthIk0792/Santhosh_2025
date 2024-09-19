@@ -192,3 +192,12 @@ permalink: /about/
 <a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
   <button> Click this to learn more about what games I like </button>
 </a>
+
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
