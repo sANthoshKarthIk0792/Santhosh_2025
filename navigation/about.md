@@ -194,7 +194,7 @@ permalink: /about/
 </a>
 
 <script src="https://utteranc.es/client.js"
-        repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
+        repo="sANthoshKarthIk0792/Santhosh_2025"
         issue-term="title"
         label="blogpost-comment"
         theme="github-light"
