@@ -194,6 +194,12 @@ New Kasm Test
   });
 
 </script>
+<h1> Santhosh's Webpage </h1>
+<p> Hello! My name is Santhosh Karthik, welcome to my website. I already know CSS and HTML, and a little bit of Javascript, but not that much </p>
+<p> I love to play games a lot, even though I know that playing too many isn't good for me </p>
+<p> I hope that CSSE can help me improve my coding skills so I can become better at coding!!! </p>
+<>
+<p> At that bottom of this page there is a button that links to my about me so that you can better learn about me! </p>
 
 ### Markdown samples  [markdown cheatsheet](https://www.markdownguide.org/getting-started/)
 

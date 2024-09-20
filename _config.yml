@@ -1,7 +1,7 @@
 title: Nighthawk Pages 
 description: "Class of 2025"
-owner_name: John Mortensen
-github_username: nighthawkcoders
+owner_name: Santhosh Karthik
+github_username: sANthoshKarthIk0792make
 github_repo: "Santhosh_2025" 
 baseurl: "/Santhosh_2025"
 future: true
@@ -15,8 +15,8 @@ minima:
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
-# remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: pages-themes/time-machine@v0.2.0
+remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
   - jekyll-remote-theme
 header_pages:
