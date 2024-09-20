@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 ---
 layout: base
 title: Student Home
