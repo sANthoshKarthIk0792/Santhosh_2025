@@ -235,7 +235,7 @@ Jelly Fish Fun
 ![image](https://github.com/user-attachments/assets/b14a08d2-d792-4b2f-aed5-e150490871af)
 <div class = "aboutdescriptions">
   <p> Click this button to learn about me! </p>
-  <a class = "aboutdescriptions" href = "https://santhoshkarthik0792.github.io/Santhosh_2025/about/">
+  <a class = "aboutdescriptions" href = "{{site.baseurl}}/Santhosh_2025/about/">
     <button> Click here! </button>
   </a>
 </div> 

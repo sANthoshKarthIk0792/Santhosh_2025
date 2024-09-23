@@ -189,7 +189,7 @@ permalink: /about/
     }
 </script>
 
-<a href="https://santhoshkarthik0792.github.io/Santhosh_2025/games/">
+<a href="{{site.baseurl}}/Santhosh_2025/games/">
   <button> Click this to learn more about what games I like </button>
 </a>
 
