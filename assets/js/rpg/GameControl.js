@@ -1,6 +1,7 @@
 import GameEnv from './GameEnv.js';
 import GameLevelSquares from './GameLevelSquares.js';
 import GameLevelWater from './GameLevelWater.js';
+import Projectile from './Projectile';
 
 /**
  * The GameControl object manages the game.
