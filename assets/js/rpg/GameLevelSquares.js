@@ -2,6 +2,7 @@
 import Background from './Background.js';
 import PlayerOne from './PlayerOne.js';
 import PlayerTwo from './PlayerTwo.js';
+import Projectile from './Projectile.js';
 
 // Minimal Definition
 class GameLevelSquares {
@@ -10,6 +11,7 @@ class GameLevelSquares {
       { class: Background, data: {} },
       { class: PlayerOne },
       { class: PlayerTwo },
+      { class: Projectile},
     ];
   }
 }

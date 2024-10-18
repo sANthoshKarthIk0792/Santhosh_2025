@@ -4,6 +4,7 @@ import Background from './Background.js';
 import PlayerOne from './PlayerOne.js';
 import PlayerTwo from './PlayerTwo.js';
 import NPC from './NPC.js';
+import Projectile from './Projectile.js';
 //import Goomba from './EnemyGoomba.js';
 //import Coin from './Coin.js';
 
@@ -78,7 +79,11 @@ class GameLevelWater {
       { class: Background, data: image_data_water },
       { class: PlayerOne, data: sprite_data_turtle },
       { class: PlayerTwo, data: sprite_data_fish },
-      { class: NPC, data: sprite_data_frog }
+      { class: NPC, data: sprite_data_frog },
+      { class: Projectile},
+
+    
+
     ];
   }
 
