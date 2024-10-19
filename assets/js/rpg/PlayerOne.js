@@ -1,53 +1,31 @@
 import Player from './Player.js';
 
-class Fish extends Player {
+class PlayerOne extends Player {
     constructor(data = null) {
         super(data);
-    }
-
-    update() {
-        super.update();
-    }
-
-    resize() {
-        super.resize();
-    }
-
-    checkProximityToNPC() {
-        var player = GameEnv.gameObjects.find(obj => obj instanceof Fish); 
-        var npc = GameEnv.gameObjects.find(obj => obj instanceof NPC);
-
-        if (player && npc) {
-            var distance = Math.sqrt(
-                Math.pow(player.position.x - npc.position.x, 2) + Math.pow(player.position.y - npc.position.y, 2)
-            );
-
-            if (distance <= 100) {
-                super.handleResponse("Hello, Fish!");
-            }
-        }
     }
 
     handleKeyDown({ keyCode }) {
         switch (keyCode) {
             case 87: // 'W' key
-                this.velocity.y -= this.yVelocity;
+                this.velocity.y = 0;
+                this.velocity.y -= 10*this.yVelocity;
                 this.direction = 'up';
                 break;
             case 65: // 'A' key
-                this.velocity.x -= this.xVelocity;
+                this.velocity.x = 0;
+                this.velocity.x -= 10*this.xVelocity;
                 this.direction = 'left';
                 break;
             case 83: // 'S' key
-                this.velocity.y += this.yVelocity;
+                this.velocity.y = 0;
+                this.velocity.y += 10*this.yVelocity;
                 this.direction = 'down';
                 break;
             case 68: // 'D' key
-                this.velocity.x += this.xVelocity;
+                this.velocity.x = 0;
+                this.velocity.x += 10*this.xVelocity;
                 this.direction = 'right';
-                break;
-            case 32: 
-                this.checkProximityToNPC();
                 break;
         }
     }
@@ -75,6 +53,7 @@ class Fish extends Player {
                 break;
         }
     }
+
 }
 
-export default Fish;
+export default PlayerOne;

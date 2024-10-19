@@ -1,31 +1,65 @@
+import GameEnv from './GameEnv.js';
+import PlayerOne from './PlayerOne.js';
+const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
+const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
+const ANIMATION_RATE = 1; // 1/nth of the frame rate
+const MAX_VELOCITY = 60;
+const INIT_POSITION = {
+  x: 500,
+  y: 240,
+};
 class Projectile {
-    constructor (){
+    constructor (data = null){
         this.projData = {
-            speed: 5,
+            acceleration: 0.1,
             size: 134,
-            startingX: 0,
-            startingY: 0,
         }
-        this.xTraveled = this.projData.speed * 5;
+        this.scaleFactor = SCALE_FACTOR;
+        this.stepFactor = STEP_FACTOR;
+        this.animationRate = ANIMATION_RATE;
         this.radians = 0;
         this.image = new Image();
-        this.image.src = '/images/rpg/projectile.png'
+        this.image.src = data.src;
         this.image.width = 536;
         this.image.height = 268;
-        this.position = {
-          x: initialPositionX,
-          y: initialPositionY,
-        };
+        this.imageLoaded = false;
+        this.image.onload = () => {
+          this.imageLoaded = true;
+        }
+        this.position = INIT_POSITION;
         this.velocity = {
           x: 0,
           y: 0,
         }
         this.frameX = 134;
         this.frameY = 134;
-        const frameWidth = 134;
-        const frameHeight = 134;
+        this.frameWidth = 134;
+        this.frameHeight = 134;
+        this.scale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
         
     }
+    resize() {
+      // Calculate the new scale resulting from the window resize
+      const newScale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
+
+      // Adjust the player's position proportionally
+      this.position.x = (this.position.x / this.scale.width) * newScale.width;
+      this.position.y = (this.position.y / this.scale.height) * newScale.height;
+
+      // Update the player's scale to the new scale
+      this.scale = newScale;
+
+      // Recalculate the player's size based on the new scale
+      this.size = this.scale.height / this.scaleFactor; 
+
+      // Recalculate the player's velocity steps based on the new scale
+      this.xVelocity = this.scale.width / this.stepFactor;
+      this.yVelocity = this.scale.height / this.stepFactor;
+
+      // Set the player's width and height to the new size (object is a square)
+      this.width = this.size;
+      this.height = this.size;
+  }
     draw(){
       this.radians +=0.1 * Math.PI;
                       
@@ -50,13 +84,19 @@ class Projectile {
       else{
         this.velocity.y -=3;
       }
+      if (Math.abs(this.velocity.x) > MAX_VELOCITY) {
+        this.velocity.x = Math.sign(this.velocity.x) * MAX_VELOCITY;
+      }
+      if (Math.abs(this.velocity.y) > MAX_VELOCITY) {
+        this.velocity.y = Math.sign(this.velocity.y) * MAX_VELOCITY;
+      }
       if (this.distanceWithinRange() === true){
-        this.position.x += this.projData.speed * Math.cos(this.radians);
-        this.position.y += this.projData.speed * Math.sin(this.radians);
+        this.position.x += this.projData.acceleration * Math.cos(this.radians) + this.velocity.x;
+        this.position.y += this.projData.acceleration * -Math.cos(this.radians) + this.velocity.y;
       }
       else {
-        this.position.x += this.projData.speed * this.velocity.x;
-        this.position.y += this.projData.speed * this.velocity.y;
+        this.position.x += this.projData.acceleration * this.velocity.x;
+        this.position.y += this.projData.acceleration * this.velocity.y;
       }
 
       //Changes the frame of the image
@@ -99,21 +139,24 @@ class Projectile {
         }
 
       }
+      if (this.imageLoaded) {
       GameEnv.ctx.drawImage(
         this.image,
         this.frameX, this.frameY,
-        frameWidth, frameHeight,
+        this.frameWidth, this.frameHeight,
         this.position.x, this.position.y,
         this.projData.size, this.projData.size
       )
+      }
     }
     update() {
       this.draw();
+      console.log("hi");
     }
       distanceWithinRange(){
           var players = GameEnv.gameObjects.filter(obj => obj instanceof PlayerOne);
           var player = players[0]
-          const MAX_DISTANCE = 500;
+          const MAX_DISTANCE = 200;
           var distance = Math.sqrt(
             //maybe change player to playerone
             Math.pow(player.position.x - this.position.x, 2) + Math.pow(player.position.y - this.position.y, 2)
