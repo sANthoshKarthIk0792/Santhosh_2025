@@ -12,7 +12,6 @@ class Projectile {
     constructor (data = null){
         this.projData = {
             acceleration: 0.1,
-            size: 134,
         }
         this.scaleFactor = SCALE_FACTOR;
         this.stepFactor = STEP_FACTOR;
@@ -21,6 +20,8 @@ class Projectile {
         this.image = new Image();
         this.image.src = data.src;
         this.image.width = 536;
+        this.width = 30;
+        this.height = 30;
         this.image.height = 268;
         this.imageLoaded = false;
         this.image.onload = () => {
@@ -145,7 +146,7 @@ class Projectile {
         this.frameX, this.frameY,
         this.frameWidth, this.frameHeight,
         this.position.x, this.position.y,
-        this.projData.size, this.projData.size
+        5*this.width, 5*this.height
       )
       }
     }
