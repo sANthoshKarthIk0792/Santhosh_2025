@@ -9,22 +9,22 @@ class PlayerOne extends Player {
         switch (keyCode) {
             case 87: // 'W' key
                 this.velocity.y = 0;
-                this.velocity.y -= 10*this.yVelocity;
+                this.velocity.y -= 7*this.yVelocity;
                 this.direction = 'up';
                 break;
             case 65: // 'A' key
                 this.velocity.x = 0;
-                this.velocity.x -= 10*this.xVelocity;
+                this.velocity.x -= 7*this.xVelocity;
                 this.direction = 'left';
                 break;
             case 83: // 'S' key
                 this.velocity.y = 0;
-                this.velocity.y += 10*this.yVelocity;
+                this.velocity.y += 7*this.yVelocity;
                 this.direction = 'down';
                 break;
             case 68: // 'D' key
                 this.velocity.x = 0;
-                this.velocity.x += 10*this.xVelocity;
+                this.velocity.x += 7*this.xVelocity;
                 this.direction = 'right';
                 break;
         }

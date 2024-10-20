@@ -3,7 +3,7 @@ import PlayerOne from './PlayerOne.js';
 const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
 const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
 const ANIMATION_RATE = 1; // 1/nth of the frame rate
-const MAX_VELOCITY = 60;
+const MAX_VELOCITY = 65;
 const INIT_POSITION = {
   x: 500,
   y: 240,
@@ -11,7 +11,7 @@ const INIT_POSITION = {
 class Projectile {
     constructor (data = null){
         this.projData = {
-            acceleration: 0.1,
+            acceleration: 0.2,
         }
         this.scaleFactor = SCALE_FACTOR;
         this.stepFactor = STEP_FACTOR;
