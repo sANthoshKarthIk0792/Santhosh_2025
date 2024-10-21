@@ -25,3 +25,7 @@ This blog contains my journey into coding
         <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             RPG v0.1
         </div>
+    <a href="{{site.baseurl}}/rpg3x" style="text-decoration: none;">
+        <div style="background-color: #8806d4; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            RPG v0.2
+        </div>
