@@ -4,8 +4,8 @@ import PlayerTwo from './PlayerTwo.js';
 const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
 const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
 const ANIMATION_RATE = 1; // 1/nth of the frame rate
-const MAX_VELOCITY = 65;
-const MAX_DISTANCE = 250;
+const MAX_VELOCITY = 30;
+const MAX_DISTANCE = 100;
 const INIT_POSITION = {
   x: 500,
   y: 240,
@@ -39,7 +39,8 @@ class Projectile {
         this.frameWidth = 134;
         this.frameHeight = 134;
         this.scale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
-        
+        this.timerCalled = false;
+        this.targetP = "player1";
     }
     resize() {
       // Calculate the new scale resulting from the window resize
@@ -64,7 +65,7 @@ class Projectile {
       this.height = this.size;
   }
     draw(){
-      this.radians += 0.1*Math.PI;
+      this.radians += Math.PI;
                       
       //Change the velocity of the projectile
       if(this.targetX() - this.position.x > 0){
@@ -106,8 +107,8 @@ class Projectile {
         this.velocity.y = Math.sign(this.velocity.y) * MAX_VELOCITY;
       }
       if (this.distanceWithinRange() === true){
-        this.position.x += this.projData.acceleration * Math.cos(this.radians) + this.velocity.x;
-        this.position.y += this.projData.acceleration * -Math.cos(this.radians) + this.velocity.y;
+        this.position.x += this.velocity.x * Math.abs(Math.cos(this.radians));
+        this.position.y += this.velocity.y * Math.abs(Math.cos(this.radians));
       }
       else {
         this.position.x += this.projData.acceleration * this.velocity.x;
@@ -211,7 +212,6 @@ class Projectile {
     }
     update() {
       this.draw();
-      console.log("hi");
     }
       player1X(){
         var players = GameEnv.gameObjects.filter(obj => obj instanceof PlayerOne);
@@ -234,16 +234,26 @@ class Projectile {
         return player.position.y;
       }   
       target(){
-        let distanceP1 = Math.sqrt(
-          Math.pow(this.player1X() - this.position.x, 2) + Math.pow(this.player1Y() - this.position.y, 2)
-        );
-        let distanceP2 = Math.sqrt(
-          Math.pow(this.player2X() - this.position.x, 2) + Math.pow(this.player2Y() - this.position.y, 2)
-        );
-        if (distanceP1 > distanceP2){
+        if(this.timer() === true){
+          let distanceP1 = Math.sqrt(
+            Math.pow(this.player1X() - this.position.x, 2) + Math.pow(this.player1Y() - this.position.y, 2)
+          );
+          let distanceP2 = Math.sqrt(
+            Math.pow(this.player2X() - this.position.x, 2) + Math.pow(this.player2Y() - this.position.y, 2)
+          );
+          if (distanceP1 > distanceP2){
+            this.targetP = "player2";
+            return true;
+          }
+          else {
+            this.targetP = "player1";
+            return false;
+          }
+        }
+        if (this.targetP === "player1"){
           return true;
         }
-        else {
+        else if (this.targetP === "player2"){
           return false;
         }
       }
@@ -286,6 +296,19 @@ class Projectile {
             return false;
           }
         }   
+    }
+    timer(){
+      if (this.timerCalled === true){
+        return false;
+      }
+      else {
+        this.timerCalled = true;
+        setTimeout(() => {
+          this.timerCalled = false; 
+          console.log("Hey! I am working!")
+      }, 10000);
+        return true;
+      }
     }
 }
 export default Projectile;
