@@ -1,5 +1,4 @@
 import Player from './Player.js';
-
 class PlayerOne extends Player {
     constructor(data = null) {
         super(data);

@@ -6,25 +6,26 @@ class PlayerTwo extends Player {
     }
 
     handleKeyDown({ keyCode }) {
+        if(this.player2X())
         switch (keyCode) {
             case 73: // 'I' key
                 this.velocity.y = 0;
-                this.velocity.y -= 2 * this.yVelocity;
+                this.velocity.y -= 7 * this.yVelocity;
                 this.direction = 'up';
                 break;
             case 74: // 'J' key
                 this.velocity.x = 0;
-                this.velocity.x -= 2 * this.xVelocity;
+                this.velocity.x -= 5 * this.xVelocity;
                 this.direction = 'left';
                 break;
             case 75: // 'K' key
                 this.velocity.y = 0;
-                this.velocity.y += 2 * this.yVelocity;
+                this.velocity.y += 5 * this.yVelocity;
                 this.direction = 'down';
                 break;
             case 76: // 'L' key
-                this.velocity.x = 0;
-                this.velocity.x += 2 * this.xVelocity;
+                this.velocity.y = 0;
+                this.velocity.x += 5 * this.xVelocity;
                 this.direction = 'right';
                 break;
         }
@@ -45,8 +46,7 @@ class PlayerTwo extends Player {
                 this.velocity.x = 0;
                 break;
         }
-    }
-
+    } 
 }
 
 export default PlayerTwo;
