@@ -1,7 +1,7 @@
 import GameEnv from './GameEnv.js';
 import PlayerOne from './PlayerOne.js';
 import PlayerTwo from './PlayerTwo.js';
-const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
+const SCALE_FACTOR = 100; // 1/nth of the height of the canvas
 const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
 const ANIMATION_RATE = 1; // 1/nth of the frame rate
 const MAX_VELOCITY = 30;
@@ -22,8 +22,8 @@ class Projectile {
         this.image = new Image();
         this.image.src = data.src;
         this.image.width = 536;
-        this.width = 30;
-        this.height = 30;
+        this.width = 15;
+        this.height = 15;
         this.image.height = 268;
         this.imageLoaded = false;
         this.image.onload = () => {
@@ -305,10 +305,11 @@ class Projectile {
         this.timerCalled = true;
         setTimeout(() => {
           this.timerCalled = false; 
-          console.log("Hey! I am working!")
+          console.log("Hey! I am working!");
       }, 10000);
         return true;
       }
     }
+    collision(){}
 }
 export default Projectile;
