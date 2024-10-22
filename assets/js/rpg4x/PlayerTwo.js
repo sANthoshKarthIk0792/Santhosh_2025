@@ -23,7 +23,7 @@ class PlayerTwo extends Player {
                 this.direction = 'down';
                 break;
             case 76: // 'L' key
-                this.velocity.y = 0;
+                this.velocity.x = 0;
                 this.velocity.x += 2 * this.xVelocity;
                 this.direction = 'right';
                 break;
