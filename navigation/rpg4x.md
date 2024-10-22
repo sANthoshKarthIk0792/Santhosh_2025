@@ -35,7 +35,27 @@ permalink: /rpg4x/
     import GameControl from '{{site.baseurl}}/assets/js/rpg4x/GameControl.js';
 
     const path = "{{site.baseurl}}";
+    function toggleFullScreen() {
+        const canvas = document.getElementById('gameCanvas');
+        if (!document.fullscreenElement) {
+            if (canvas.requestFullscreen) {
+                canvas.requestFullscreen();
+            } else if (canvas.mozRequestFullScreen) { // Firefox
+                canvas.mozRequestFullScreen();
+            } else if (canvas.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                canvas.webkitRequestFullscreen();
+            } else if (canvas.msRequestFullscreen) { // IE/Edge
+                canvas.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
 
+    const canvas = document.getElementById('gameCanvas');
+    canvas.addEventListener('click', toggleFullScreen); 
     // Start game engine
     GameControl.start(path);
 </script>
