@@ -310,6 +310,5 @@ class Projectile {
         return true;
       }
     }
-    collision(){}
 }
 export default Projectile;

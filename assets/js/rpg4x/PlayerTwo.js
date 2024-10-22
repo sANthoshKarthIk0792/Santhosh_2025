@@ -6,7 +6,6 @@ class PlayerTwo extends Player {
     }
 
     handleKeyDown({ keyCode }) {
-        if(this.player2X())
         switch (keyCode) {
             case 73: // 'I' key
                 this.velocity.y = 0;
