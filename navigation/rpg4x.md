@@ -53,7 +53,7 @@ permalink: /rpg4x/
             }
         }
     }
-
+ 
     const canvas = document.getElementById('gameCanvas');
     canvas.addEventListener('click', toggleFullScreen); 
     // Start game engine
