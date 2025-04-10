@@ -3,7 +3,6 @@ layout: blogs
 title: Cybersecurity Blog
 permalink: /cyberblog/
 ---
-# Cybersecurity Blog
 
 ## Essential Concepts
 - **Risk Awareness**
