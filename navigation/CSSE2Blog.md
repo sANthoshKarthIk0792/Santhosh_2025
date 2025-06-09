@@ -3,14 +3,15 @@ layout: page
 title: CSSE2 Blog
 permalink: /CSSE2blog/
 ---
-# 🎮 Final Project Reflection: What I Learned in JavaScript and Computer Science
+
+# Final Project Reflection: What I Learned in JavaScript and Computer Science
 
 Through building a **Minecraft-style Nether dimension game**, I explored key **Computer Science**, **JavaScript**, and **Object-Oriented Programming** concepts. Below is a summary of the terms I learned and how I applied them in my project.
-<img width="467" alt="Screenshot 2025-06-09 at 11 19 34 AM" src="https://github.com/user-attachments/assets/f068a766-b91b-4f3d-9800-9332ee72af57" />
+<img width="467" alt="Screenshot 2025-06-09 at 11 19 34 AM" src="https://github.com/user-attachments/assets/f068a766-b91b-4f3d-9800-9332ee72af57" />
 
 ---
 
-## 📋 Software Engineering Practices
+## Software Engineering Practices
 
 - **Planning Changes**: Outlining intended code changes before implementation to stay organized and avoid bugs.
 - **Checklists**: Tracking progress using a list of tasks or features.
@@ -32,7 +33,7 @@ handleVictory() {
 
 ---
 
-## 🔁 Software Development Lifecycle Practices
+## Software Development Lifecycle Practices
 
 - **Source Control**: Using tools like Git to keep a history of code changes.
 - **Forking**: Copying someone else's project to work on it independently.
@@ -50,7 +51,7 @@ console.log('Victory condition met!');
 
 ---
 
-## 🔁 Retrospective Engineering Practices
+## Retrospective Engineering Practices
 
 - **Presentation**: Sharing and explaining the project to an audience.
 - **Live Reviews**: Getting real-time feedback while showing your work.
@@ -60,9 +61,9 @@ console.log('Victory condition met!');
 
 ---
 
-## 🧠 Key Coding Concepts
+## Key Coding Concepts
 
-### 📊 Data Types
+### Data Types
 
 I used various data types throughout my game:
 
@@ -109,12 +110,12 @@ this.active = true;
 
 ---
 
-### ➕ Operators
+### Operators
 
 - **String Operations**: Building dynamic CSS and HTML content
 ```js
 victoryDiv.innerHTML = `
-  <div>🎉 VICTORY! 🎉</div>
+  <div>VICTORY!</div>
   <div style="font-size: 32px;">You defeated the Ghast!</div>
   <div>Fireballs Hit Back: ${this.fireballHitCount}/2</div>
 `;
@@ -153,7 +154,7 @@ if (!this.active && !this.exploding) {
 
 ---
 
-### 🔁 Control Structures
+### Control Structures
 
 - **Iteration**: Processing game objects and particles
 ```js
@@ -223,7 +224,7 @@ for (let fireball of fireballs) {
 
 ---
 
-### ⌨️ Input/Output
+### Input/Output
 
 - **HTML5 Input**: Dynamic element creation for game screens
 ```js
@@ -280,7 +281,7 @@ playerInstance.handleKeyDown = function(event) {
 
 // Complex input validation with multiple checks
 if (isNaN(this.position.x) || isNaN(this.position.y)) {
-  console.error(`❌ Invalid GhastFireball position: x=${this.position.x}, y=${this.position.y}`);
+  console.error(`Invalid GhastFireball position: x=${this.position.x}, y=${this.position.y}`);
   this.explode();
   return;
 }
@@ -288,7 +289,7 @@ if (isNaN(this.position.x) || isNaN(this.position.y)) {
 
 ---
 
-## 🧱 Classes and Object-Oriented Programming
+## Classes and Object-Oriented Programming
 
 ### **Writing Classes**: Custom game objects
 ```js
@@ -399,7 +400,7 @@ npcInstance.shootFireball = function(target) {
 
 ---
 
-## 🎯 Advanced Game Programming Concepts
+## Advanced Game Programming Concepts
 
 ### **Canvas API Management**: Graphics rendering system
 ```js
@@ -495,7 +496,7 @@ updateParticles() {
 
 ---
 
-## ✅ Coding Practices Applied
+## Coding Practices Applied
 
 - **SRP (Single Responsibility Principle)**: Each function handles one specific task
 ```js
@@ -622,7 +623,7 @@ updateExplosion() {
 
 ---
 
-## 🎨 Visual Programming Techniques
+## Visual Programming Techniques
 
 ### **Dynamic Styling**: Runtime CSS manipulation
 ```js
@@ -672,7 +673,7 @@ showVictoryScreen() {
   
   // Dynamic content with game state
   victoryDiv.innerHTML = `
-    <div>🎉 VICTORY! 🎉</div>
+    <div>VICTORY!</div>
     <div style="font-size: 32px;">You defeated the Ghast!</div>
     <div>Fireballs Hit Back: ${this.fireballHitCount}/2</div>
   `;
@@ -700,7 +701,7 @@ draw() {
 
 ---
 
-## 🚀 Game Features Implemented
+## Game Features Implemented
 
 ### **Combat System**
 - Player attack mechanics with cooldowns
@@ -763,7 +764,7 @@ cleanupPreviousLevel(gameEnv) {
 
 ---
 
-## 🏁 Final Thoughts
+## Final Thoughts
 
 This project not only helped me apply technical skills but also encouraged creativity, problem-solving, and system design thinking. I learned to manage complex game state, implement physics systems, create engaging visual effects, and handle user interaction. The combination of object-oriented programming, graphics programming, and game logic has given me a strong foundation for future development projects.
 
