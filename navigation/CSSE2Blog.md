@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blogs
 title: CSSE2 Blog
 permalink: /CSSE2blog/
 ---
