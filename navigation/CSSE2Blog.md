@@ -8,6 +8,8 @@ permalink: /CSSE2blog/
 
 Through building a **Minecraft-style Nether dimension game**, I explored key **Computer Science**, **JavaScript**, and **Object-Oriented Programming** concepts. Below is a summary of the terms I learned and how I applied them in my project.
 <img width="467" alt="Screenshot 2025-06-09 at 11 19 34 AM" src="https://github.com/user-attachments/assets/f068a766-b91b-4f3d-9800-9332ee72af57" />
+<img width="1418" alt="Screenshot 2025-06-09 at 1 46 45 PM" src="https://github.com/user-attachments/assets/133accc2-befd-40e3-90fb-62d43717a5ed" />
+<img width="1357" alt="Screenshot 2025-06-09 at 1 47 12 PM" src="https://github.com/user-attachments/assets/b8ce399c-df89-4c04-8af7-6a8b36c3a699" />
 
 ---
 
