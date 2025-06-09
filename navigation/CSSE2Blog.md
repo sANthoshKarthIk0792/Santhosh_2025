@@ -6,6 +6,7 @@ permalink: /CSSE2blog/
 # 🎮 Final Project Reflection: What I Learned in JavaScript and Computer Science
 
 Through building a **Minecraft-style Nether dimension game**, I explored key **Computer Science**, **JavaScript**, and **Object-Oriented Programming** concepts. Below is a summary of the terms I learned and how I applied them in my project.
+<img width="467" alt="Screenshot 2025-06-09 at 11 19 34 AM" src="https://github.com/user-attachments/assets/f068a766-b91b-4f3d-9800-9332ee72af57" />
 
 ---
 
